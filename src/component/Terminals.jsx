@@ -32,6 +32,8 @@ const Terminals = ({isHome=false}) => {
     terminal.phone.includes(search)
   );
 
+  
+
   return (
     <div className="w-full">
 

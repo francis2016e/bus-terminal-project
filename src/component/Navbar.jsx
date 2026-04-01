@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import terminalLogo from "../assets/enugu bus terminal logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -10,8 +11,8 @@ const Navbar = () => {
 
   const mobileShowActive = ({ isActive }) =>
     isActive
-      ? "bg-emerald-600 text-white font-semibold rounded-md px-3 py-2"
-      : "text-slate-700 hover:bg-emerald-100 rounded-md px-3 py-2 transition";
+      ? "bg-blue-600 text-white font-semibold rounded-md px-3 py-2"
+      : "text-slate-700 hover:bg-blue-100 rounded-md px-3 py-2 transition";
 
 
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <NavLink to="/" className="text-xl font-bold text-gray-900">
-            Enugu-Bus
+            <img src={terminalLogo} alt="Terminal Logo" className="h-20 w-20 md:h-24 md:w-24" />
           </NavLink>
 
           {/* Desktop Menu */}

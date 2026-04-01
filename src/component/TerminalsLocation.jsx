@@ -38,6 +38,8 @@ const TerminalsLocation = ({isHome=true}) => {
         terminal.phone.includes(search)
       );
 
+      
+
   return (
     <div>
 

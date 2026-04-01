@@ -1,3 +1,12 @@
+import t1shop1 from "../assets/T1shop1.jfif";
+import t1shop2 from "../assets/T1shop2.jfif";
+import t1shop3 from "../assets/T1shop3.jfif";
+import t1shop4 from "../assets/T1shop4.jfif";
+import t1shop5 from "../assets/T1shop5.jfif";
+
+
+
+
 export const terminalData = [
   {
     id: 1,
@@ -33,4 +42,40 @@ export const terminalData = [
     image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=400",
 
   }
+];
+
+
+export const shops = [
+  {
+    id: 1,
+    image: t1shop5,
+    name: "Luxury Boutique Space",
+    price: "$500/mo",
+    location: "Main Terminal, Gate 4",
+    imageArray: [t1shop1, t1shop2, t1shop3, t1shop4],
+  },
+  {
+    id: 2,
+    image: t1shop2,
+    name: "Express Coffee Kiosk",
+    price: "$350/mo",
+    location: "Waiting Lounge A",
+    imageArray: [t1shop2, t1shop3, t1shop4, t1shop1],
+  },
+  {
+    id: 3,
+    image: t1shop3,
+    name: "Tech & Gadget Hub",
+    price: "$600/mo",
+    location: "Arrivals Hall",
+    imageArray: [t1shop3, t1shop4, t1shop1, t1shop2],
+  },
+  {
+    id: 4,
+    image: t1shop4,
+    name: "Bookstore & Stationery",
+    price: "$450/mo",
+    location: "Departure Hall",
+    imageArray: [t1shop4, t1shop1, t1shop2, t1shop3],
+  },
 ];
