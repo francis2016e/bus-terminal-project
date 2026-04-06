@@ -57,16 +57,21 @@ const Contact = () => {
 const handleSubmit = (e) => {
   e.preventDefault();
 
+
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   emailjs
     .send(
-      service_oe1jjam,   // from EmailJS
-      template_73si1av,  // from EmailJS
+      serviceId,   // from EmailJS
+      templateId,  // from EmailJS
       {
         name: form.name,
         email: form.email,
         message: form.message,
       },
-      pukbMEumjuhZ-ZHmU   // from EmailJS
+      publicKey    // from EmailJS
     )
     .then(
       (result) => {
