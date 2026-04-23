@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import welcomeImage from "../assets/governor img.jpg";
+import { Link } from "react-router-dom";
 
 const WelcomeCard = () => {
   return (
@@ -30,7 +31,7 @@ const WelcomeCard = () => {
           <img
             src={welcomeImage}
             alt="Terminal"
-            className="w-full h-full pt-10 pb-10 pl-20 pr-20 object-cover "
+            className="w-full h-full pt-10 pb-10 pl-20 pr-20 object-cover rounded-5xl shadow-lg"
           />
         </motion.div>
 
@@ -50,10 +51,11 @@ const WelcomeCard = () => {
           <p className="text-gray-600 mb-4">
            We provide organized terminals, comfortable waiting areas, secure environments, and efficient transport services across Enugu State. Our facilities are designed to ensure passenger safety, convenience, and timely departures while maintaining high standards of cleanliness and operational excellence. We are committed to delivering reliable travel experiences through well-managed terminals and customer-focused service.
           </p>
-
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+        <Link to="/about">
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition ">
             Learn More
           </button>
+        </Link>
         </motion.div>
 
       </div>

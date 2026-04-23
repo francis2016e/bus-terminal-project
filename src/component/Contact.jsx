@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import enuguMap from "../assets/static enugu map.png";
-import { FaPhone,FaMapMarker,FaMailBulk } from "react-icons/fa";
+import { FaPhone, FaMapMarker, FaMailBulk } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -11,85 +10,50 @@ const Contact = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false); // Added loading state
+
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-// const handleSubmit = (e) => {
-//   e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true); // Start loading
 
-//   const phoneNumber = "2348163440860"; // replace with your WhatsApp number (no +)
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-//   const text = `Name: ${form.name}%0AEmail: ${form.email}%0AMessage: ${form.message}`;
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        },
+        publicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully ✅");
 
-//   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+          // THIS CLEARS THE INPUTS
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Something went wrong ❌");
+        }
+      )
+      .finally(() => {
+        setLoading(false); // Stop loading regardless of success or failure
+      });
+  };
 
-//   window.open(whatsappURL, "_blank");
-
-//   // clear form after sending
-//   setForm({ name: "", email: "", message: "" });
-// };
-
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-
-//   const email = "ememichael2016@gmail.com"; // your receiving email
-
-//   const subject = "New Contact Message";
-
-//   const body = `
-// Name: ${form.name}
-// Email: ${form.email}
-
-// Message:
-// ${form.message}
-//   `;
-
-//   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-//   window.location.href = mailtoLink;
-
-//   // clear form after sending
-//   setForm({ name: "", email: "", message: "" });
-// };
-
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-
-const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-  emailjs
-    .send(
-      serviceId,   // from EmailJS
-      templateId,  // from EmailJS
-      {
-        name: form.name,
-        email: form.email,
-        message: form.message,
-      },
-      publicKey    // from EmailJS
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-        alert("Message sent successfully ✅");
-
-        // clear form
-        setForm({ name: "", email: "", message: "" });
-      },
-      (error) => {
-        console.log(error.text);
-        alert("Something went wrong ❌");
-      }
-    );
-};
   return (
     <div className="w-full">
-
       {/* HERO */}
       <div className="bg-gradient-to-r from-gray-800 to-indigo-700 text-white text-center py-20 px-4">
         <h1 className="text-4xl font-bold">Contact Us</h1>
@@ -113,7 +77,7 @@ const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
         </div>
 
         <div className="bg-white p-6 rounded-2xl shadow text-center">
-          <h3 className="font-semibold mb-2">📧 Email</h3>
+          <h3 className="font-semibold mb-2 flex items-center justify-center gap-2"><FaMailBulk className="text-yellow-500"/> Email</h3>
           <p className="text-gray-600">info@enuguterminal.com</p>
         </div>
       </div>
@@ -122,10 +86,7 @@ const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       <div className="max-w-6xl mx-auto px-6 pb-16 grid gap-10 md:grid-cols-2">
 
         {/* CONTACT FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-2xl shadow"
-        >
+        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow">
           <h2 className="text-2xl font-bold mb-6">Send Message</h2>
 
           <input
@@ -158,22 +119,21 @@ const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
             required
           />
 
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-            Send Message
+          <button 
+            type="submit" 
+            disabled={loading} // Disable button while sending
+            className={`${loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'} text-white px-6 py-3 rounded-lg transition`}
+          >
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
 
         {/* MAP PLACEHOLDER */}
-         <a href="https://www.google.com/maps/@6.4331212,7.482315,16.26z?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank" rel="noopener noreferrer"
-          >
-        <div className="bg-gray-200 rounded-2xl flex items-center justify-center text-gray-500 hover:border-2 hover:border-blue-500 transition p-7">
-         
-          <img src={enuguMap} alt="Enugu Map" className="w-full h-full object-cover" />
-         
-        </div>
-         </a>
-
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+          <div className="bg-gray-200 rounded-2xl flex items-center justify-center text-gray-500 hover:border-2 hover:border-blue-500 transition p-7 overflow-hidden h-full">
+            <img src={enuguMap} alt="Enugu Map" className="w-full h-full object-cover" />
+          </div>
+        </a>
       </div>
     </div>
   );

@@ -50,32 +50,56 @@ export const shops = [
     id: 1,
     image: t1shop5,
     name: "Luxury Boutique Space",
-    price: "$500/mo",
-    location: "Main Terminal, Gate 4",
+    // price: "$500/mo",
+    // location: "Terminal 1",
     imageArray: [t1shop1, t1shop2, t1shop3, t1shop4],
   },
   {
     id: 2,
     image: t1shop2,
     name: "Express Coffee Kiosk",
-    price: "$350/mo",
-    location: "Waiting Lounge A",
+    // price: "$350/mo",
+    // location: "Terminal 2",
     imageArray: [t1shop2, t1shop3, t1shop4, t1shop1],
   },
   {
     id: 3,
     image: t1shop3,
     name: "Tech & Gadget Hub",
-    price: "$600/mo",
-    location: "Arrivals Hall",
+    // price: "$600/mo",
+    // location: "Abakpa Terminal",
     imageArray: [t1shop3, t1shop4, t1shop1, t1shop2],
   },
   {
     id: 4,
     image: t1shop4,
     name: "Bookstore & Stationery",
-    price: "$450/mo",
-    location: "Departure Hall",
+    // price: "$450/mo",
+    // location: "Gariki Terminal",
     imageArray: [t1shop4, t1shop1, t1shop2, t1shop3],
+  },
+];
+
+export const shopListings = [
+  {
+    id: 1,
+    image: t1shop5,
+    location: "Terminal 1",
+    
+  },
+  {
+    id: 2,
+    image: t1shop2,
+    location: "Terminal 2",
+  },
+  { 
+    id: 3,
+    image: t1shop3,
+    location: "Abakpa Terminal",
+  },
+  {
+    id: 4,
+    image: t1shop4,
+    location: "Gariki Terminal",
   },
 ];

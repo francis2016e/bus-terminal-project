@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -20,24 +21,24 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-sm">
             <li className="">
-              <a href="/" className="hover:text-blue-500 transition">
+              <Link to="/" className="hover:text-blue-500 transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-blue-500 transition">
+              <Link to="/about" className="hover:text-blue-500 transition">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/services" className="hover:text-blue-500 transition">
+              <Link to="/services" className="hover:text-blue-500 transition">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-blue-500 transition">
+              <Link to="/contact" className="hover:text-blue-500 transition">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -66,14 +67,14 @@ const Footer = () => {
         {/* Social Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
-            Connect With Me
+            Connect With Us
           </h3>
           <div className="flex space-x-4 text-xl">
             <a href="#" className="hover:text-white transition">
-              <FaGithub />
+              <FaFacebook />
             </a>
             <a href="#" className="hover:text-white transition">
-              <FaLinkedin />
+              <FaInstagram />
             </a>
             <a href="#" className="hover:text-white transition">
               <FaTwitter />

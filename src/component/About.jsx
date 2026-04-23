@@ -16,11 +16,11 @@ const About = () => {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Our Identity</h2>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8">
+          <h1 className="text-4xl md:text-5xl text-slate-900 text-extrabold mb-8 font-bold">
             Redefining Transport Excellence in Enugu
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed">
-            The East-Zone Bus Terminals is more than just a departure point; it is a 
+            The Enugu East-Zone Bus Terminals is more than just a departure point; it is a 
             technologically driven gateway connecting communities. We are committed 
             to setting the gold standard for safety, efficiency, and structured 
             transportation across the region.
@@ -41,7 +41,7 @@ const About = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
               <h3 className="text-xl font-bold italic">Hon Dr. John Egbo</h3>
-              <p className="text-sm text-blue-400">Managing Director, East-Zone Bus Terminals</p>
+              <p className="text-sm text-blue-400">Managing Director, Enugu East-Zone Bus Terminals</p>
             </div>
           </div>
 
@@ -102,7 +102,7 @@ const About = () => {
             <p className="text-blue-100 text-sm font-medium">Primary Routes</p>
           </div>
           <div>
-            <h3 className="text-4xl font-black mb-1">100+</h3>
+            <h3 className="text-4xl font-black mb-1">1,000+</h3>
             <p className="text-blue-100 text-sm font-medium">Daily Departures</p>
           </div>
           <div>

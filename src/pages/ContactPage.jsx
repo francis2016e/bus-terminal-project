@@ -1,8 +1,61 @@
 import React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'; // npm install lucide-react
+import emailjs from '@emailjs/browser'; // npm install emailjs-com
 
 const Contact = () => {
+
+const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: ""
+  });
+
+  const [loading, setLoading] = useState(false); // Added loading state
+
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true); // Start loading
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID2;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID2;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY2;
+    
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: form.subject
+        },
+        publicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully ✅");
+
+          // THIS CLEARS THE INPUTS
+          setForm({ name: "", email: "", message: "" , subject: ""});
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Something went wrong ❌");
+        }
+      )
+      .finally(() => {
+        setLoading(false); // Stop loading regardless of success or failure
+      });
+  };
+
   return (
     <section className="bg-slate-50 py-20 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
@@ -84,12 +137,15 @@ const Contact = () => {
           >
             <h2 className="text-2xl font-bold text-slate-800 mb-8">Send us a Message</h2>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-slate-700">Full Name</label>
                   <input 
-                    type="text" 
+                    type="text"
+                    name='name'
+                    value={form.name} 
+                    onChange={handleChange}
                     placeholder="John Doe" 
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none"
                   />
@@ -98,6 +154,9 @@ const Contact = () => {
                   <label className="text-sm font-semibold text-slate-700">Email Address</label>
                   <input 
                     type="email" 
+                    name='email'
+                    value={form.email} 
+                    onChange={handleChange}
                     placeholder="john@example.com" 
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none"
                   />
@@ -106,19 +165,23 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-700">Subject</label>
-                <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none bg-white">
-                  <option>General Inquiry</option>
-                  <option>Ticket/Booking Issue</option>
-                  <option>Terminal Facilities</option>
-                  <option>Security Concern</option>
-                  <option>Business/Tenancy</option>
+                <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none bg-white" 
+                   onChange={handleChange} value={form.subject} name="subject"                >
+                  <option value="" disabled>Select a subject</option>
+                  <option name="General Inquiry" >General Inquiry</option>
+                  <option name="Ticket/Booking Issue" >Ticket/Booking Issue</option>
+                  <option name="Terminal Facilities">Terminal Facilities</option>
+                  <option name="Security Concern">Security Concern</option>
+                  <option name="Business/Tenancy">Business/Tenancy</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-700">Message</label>
                 <textarea 
-                  rows="5" 
+                  rows="5" name='message'
+                  value={form.message} 
+                    onChange={handleChange}
                   placeholder="How can we help you today?" 
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none resize-none"
                 ></textarea>
