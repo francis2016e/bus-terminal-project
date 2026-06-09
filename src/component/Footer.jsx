@@ -1,7 +1,13 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const Footer = () => {
+
+   const footerActive = ({isActive}) => {
+    return isActive ?  "text-white font-semibold border-b-2 border-blue-600"
+      : "text-slate-700 hover:text-white transition-colors font-medium";
+  }
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
@@ -15,30 +21,31 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div>
+        
+        <div className="">
           <h3 className="text-lg font-semibold text-white mb-4">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
             <li className="">
-              <Link to="/" className="hover:text-blue-500 transition">
+              <NavLink to="/" className={footerActive}>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-500 transition">
+              <NavLink to="/about"  className={footerActive}>
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-500 transition">
+              <NavLink to="/services"  className={footerActive}>
                 Services
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-500 transition">
+              <NavLink to="/contact"  className={footerActive}>
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

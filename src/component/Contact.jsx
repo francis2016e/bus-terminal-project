@@ -55,13 +55,19 @@ const Contact = () => {
   return (
     <div className="w-full">
       {/* HERO */}
-      <div className="bg-gradient-to-r from-gray-800 to-indigo-700 text-white text-center py-20 px-4">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="mt-4 max-w-2xl mx-auto">
-          Reach out to us for inquiries, ticketing support, or travel assistance.
-        </p>
+            <div className="bg-white border-b border-slate-100 py-20 px-4 shadow-sm">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+            Contact our <span className="text-indigo-600">Support Team</span>
+          </h1>
+          <div className="mt-6 flex justify-center">
+            <p className="max-w-xl text-lg text-slate-600 leading-relaxed">
+              We typically respond within 2 hours. Reach out for inquiries, 
+              ticketing support, or specialized travel assistance.
+            </p>
+          </div>
+        </div>
       </div>
-
       {/* CONTACT INFO */}
       <div className="max-w-6xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-3">
         <div className="bg-white p-6 rounded-2xl shadow text-center">

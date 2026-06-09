@@ -43,7 +43,7 @@ const TerminalsLocation = ({isHome=true}) => {
   return (
     <div>
 
-      {isHome && (<div className="max-w-4xl mx-auto px-4 py-8 mt-10">
+      {isHome && (<div className="max-w-4xl mx-auto px-4 py-8 mt-10 pt-20">
                 <input
                   type="text"
                   placeholder="Search by name, address or phone..."

@@ -31,7 +31,7 @@ const WelcomeCard = () => {
           <img
             src={welcomeImage}
             alt="Terminal"
-            className="w-full h-full pt-10 pb-10 pl-20 pr-20 object-cover rounded-5xl shadow-lg"
+            className="w-full h-full pt-10 pb-10 pl-10 pr-10 object-cover rounded-3xl shadow-lg"
           />
         </motion.div>
 
