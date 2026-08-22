@@ -1,5 +1,5 @@
-import terminal1 from './terminal 1.webp';
-import terminal2 from './terminal 2 ticketing.jfif';
+import terminal1 from './terminal 1.jfif';
+import terminal2 from './Terminal 2 ticketing.jfif';
 import terminal1B from './terminal 1.jfif';
 import holyGhost from './Holy-Ghost-terminal T2.webp';
 import terminalHall from './enugu bus terminal hall.webp';
