@@ -1,120 +1,106 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Quote, Target, Eye, ShieldCheck } from "lucide-react"; // npm install lucide-react
+import { Quote, Target, Eye, ShieldCheck } from "lucide-react";
 import MD from "../assets/md.jpeg";
 
 const About = () => {
   return (
-    <section className="px-6 md:px-16 py-20 bg-white">
+    <section className="px-6 md:px-10 lg:px-16 py-16 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto">
-        
-        {/* HERO / ABOUT SECTION */}
+        {/* Intro */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="max-w-3xl mx-auto text-center mb-16 md:mb-20"
         >
-          <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Our Identity</h2>
-          <h1 className="text-4xl md:text-5xl text-slate-900 text-extrabold mb-8 font-bold">
-            Redefining Transport Excellence in Enugu
+          <div className="inline-flex items-center gap-3 mb-4">
+            <span className="h-px w-8 bg-blue-600" aria-hidden="true" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-600">
+              Our Identity
+            </span>
+            <span className="h-px w-8 bg-blue-600" aria-hidden="true" />
+          </div>
+          <h1 className="text-[30px] md:text-[38px] font-bold leading-[1.05] tracking-tight text-slate-900">
+            Enugu East-Zone Bus Terminals
           </h1>
-          <p className="text-slate-600 text-lg leading-relaxed">
-            The Enugu East-Zone Bus Terminals is more than just a departure point; it is a 
-            technologically driven gateway connecting communities. We are committed 
-            to setting the gold standard for safety, efficiency, and structured 
-            transportation across the region.
+          <p className="mt-4 text-[14px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+            A Government transport infrastructure and terminal management organisation
+          </p>
+          <p className="mt-6 text-[15px] leading-7 text-slate-600 md:text-[16px] md:leading-8">
+            Enugu East-Zone Bus Terminals is a Government organisation supporting Enugu State&apos;s
+            transformation toward a safer, more organised and ultra-modern transport system. Through
+            the management of designated bus terminals, we support road decongestion, the safety of
+            passengers and goods, organised terminal environments and the coordination of mass
+            transit, interstate and town-service operations. Our work also supports commerce,
+            employment and sustainable public revenue as part of the State&apos;s broader transport
+            vision.
           </p>
         </motion.div>
 
-        {/* MD MESSAGE SECTION - THE "BRILLIANT MESSAGE" */}
+        {/* MD Message */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl mb-24 flex flex-col md:flex-row items-stretch"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-800 mb-16 md:mb-20 flex flex-col md:flex-row items-stretch"
         >
-          <div className="md:w-2/5 relative">
-            <img
-              src={MD}
-              alt="Hon Dr John Egbo"
-              className="w-full h-full object-cover min-h-[400px]"
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
-              <h3 className="text-xl font-bold italic">Hon Dr. John Egbo</h3>
-              <p className="text-sm text-blue-400">Managing Director, Enugu East-Zone Bus Terminals</p>
+          <div className="md:w-[38%] relative">
+            <img src={MD} alt="Hon Dr John Egbo" className="w-full h-full object-cover min-h-[380px] object-top" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent text-white">
+              <h3 className="text-[16px] font-semibold">Hon Dr. John Egbo</h3>
+              <p className="text-xs text-blue-200">Managing Director, Enugu East-Zone Bus Terminals</p>
             </div>
           </div>
 
-          <div className="md:w-3/5 p-10 md:p-16 flex flex-col justify-center relative">
-            <Quote className="absolute top-10 right-10 text-slate-800 w-20 h-20 -z-0" />
-            <div className="relative z-10">
-              <h4 className="text-blue-400 font-semibold mb-4 uppercase tracking-wider text-sm">MD's Visionary Message</h4>
-              <p className="text-slate-300 text-xl italic leading-relaxed mb-8">
-                "Our mission transcends simply moving vehicles from one point to another. 
-                We are building a legacy of trust. By integrating digital optimization 
-                with world-class infrastructure, we ensure that every traveler who steps 
-                into this terminal experiences the dignity, safety, and reliability 
-                they deserve."
+          <div className="md:w-[62%] p-8 md:p-10 lg:p-12 flex flex-col justify-center relative">
+            <Quote className="absolute top-8 right-8 text-slate-800 w-12 h-12" aria-hidden="true" />
+            <div className="relative">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-blue-300 mb-3">Managing Director&apos;s Message</p>
+              <p className="text-slate-200 text-[15px] md:text-[16px] leading-7 italic">
+                &ldquo;Our work is to bring greater order to public transportation — providing organised,
+                safe and welcoming terminal environments, supporting the coordination of transport
+                operations and contributing to a more efficient movement of people and goods across
+                Enugu State.&rdquo;
               </p>
-              <div className="flex items-center gap-4">
-                <div className="h-[2px] w-12 bg-blue-500"></div>
-                <p className="text-slate-400 font-medium">Leading with Operational Excellence</p>
-              </div>
+              <div className="mt-6 h-px w-10 bg-blue-600" aria-hidden="true" />
             </div>
           </div>
         </motion.div>
 
-        {/* MISSION, VISION & VALUES */}
-        <div className="grid md:grid-cols-3 gap-8 mb-24">
-          <div className="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-lg transition">
-            <Target className="text-blue-600 w-10 h-10 mb-6" />
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Our Mission</h3>
-            <p className="text-slate-600 leading-relaxed">
-              To provide safe, efficient, and reliable transportation services 
-              through well-organized terminal operations and customer-focused 
-              service delivery.
+        {/* Mission, Vision & Commitment — institutional */}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="p-7 border border-slate-200 rounded-2xl bg-slate-50">
+            <Target className="text-blue-600 w-8 h-8 mb-5" aria-hidden="true" />
+            <h3 className="text-[15px] font-bold uppercase tracking-[0.06em] text-slate-900 mb-3">Our Mission</h3>
+            <p className="text-[14px] leading-6 text-slate-600">
+              To manage designated bus terminals as organised, safe and functional public facilities
+              that support road decongestion, passenger and goods safety and the efficient coordination
+              of transport operations.
             </p>
           </div>
 
-          <div className="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-lg transition">
-            <Eye className="text-green-600 w-10 h-10 mb-6" />
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Our Vision</h3>
-            <p className="text-slate-600 leading-relaxed">
-              To become a leading transportation hub recognized for excellence, 
-              innovation, and a seamless travel experience across Nigeria.
+          <div className="p-7 border border-slate-200 rounded-2xl bg-slate-50">
+            <Eye className="text-blue-600 w-8 h-8 mb-5" aria-hidden="true" />
+            <h3 className="text-[15px] font-bold uppercase tracking-[0.06em] text-slate-900 mb-3">Our Vision</h3>
+            <p className="text-[14px] leading-6 text-slate-600">
+              To contribute to Enugu State&apos;s emergence as a State with a leading ultra-modern
+              transport system — orderly, safe and efficient for residents, operators and businesses.
             </p>
           </div>
 
-          <div className="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-lg transition">
-            <ShieldCheck className="text-purple-600 w-10 h-10 mb-6" />
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Our Commitment</h3>
-            <p className="text-slate-600 leading-relaxed">
-              We prioritize passenger security and terminal hygiene above all, 
-              ensuring that our environment is conducive for both commerce and travel.
+          <div className="p-7 border border-slate-200 rounded-2xl bg-slate-50">
+            <ShieldCheck className="text-blue-600 w-8 h-8 mb-5" aria-hidden="true" />
+            <h3 className="text-[15px] font-bold uppercase tracking-[0.06em] text-slate-900 mb-3">Our Commitment</h3>
+            <p className="text-[14px] leading-6 text-slate-600">
+              To maintain clean, orderly and ambient terminal environments that are secure for
+              passengers, goods and transport workers and supportive of legitimate commerce and
+              employment.
             </p>
           </div>
         </div>
-
-        {/* REFINED STATS SECTION */}
-        <div className="bg-blue-600 rounded-2xl p-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
-          <div>
-            <h3 className="text-4xl font-black mb-1">15+</h3>
-            <p className="text-blue-100 text-sm font-medium">Primary Routes</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-black mb-1">1,000+</h3>
-            <p className="text-blue-100 text-sm font-medium">Daily Departures</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-black mb-1">24/7</h3>
-            <p className="text-blue-100 text-sm font-medium">Live Surveillance</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-black mb-1">5,000+</h3>
-            <p className="text-blue-100 text-sm font-medium">Weekly Passengers</p>
-          </div>
-        </div>
-
       </div>
     </section>
   );

@@ -1,99 +1,93 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-
-   const footerActive = ({isActive}) => {
-    return isActive ?  "text-white font-semibold border-b-2 border-blue-600"
-      : "text-slate-700 hover:text-white transition-colors font-medium";
-  }
+  const linkClass = ({ isActive }) =>
+    isActive ? "text-white font-semibold" : "text-slate-400 hover:text-white transition-colors";
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
-        
-        {/* Brand Section */}
+    <footer className="bg-slate-900 text-slate-300">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12 grid gap-10 md:grid-cols-3">
+        {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-white">Enugu East Zone Bus Terminal</h2>
-          <p className="mt-4 text-sm leading-6">
-         Delivering safe, reliable, and efficient transportation services with a focus on comfort and convenience. Let’s make your journey smoother.
+          <h2 className="text-[15px] font-bold uppercase tracking-[0.12em] text-white">
+            Enugu East-Zone Bus Terminals
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-slate-400">
+            Supporting safe, organised transport across Enugu State.
+          </p>
+          <p className="mt-3 text-xs leading-5 text-slate-500">
+            A Government transport infrastructure and terminal management organisation.
           </p>
         </div>
 
-        {/* Quick Links */}
-        
-        <div className="">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Quick Links
-          </h3>
+        {/* Institutional links */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-white mb-4">Explore</h3>
           <ul className="space-y-2 text-sm">
-            <li className="">
-              <NavLink to="/" className={footerActive}>
-                Home
+            <li>
+              <NavLink to="/terminals" className={linkClass}>
+                Terminals
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about"  className={footerActive}>
+              <NavLink to="/services" className={linkClass}>
+                Our Mandate
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className={linkClass}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services"  className={footerActive}>
-                Services
+              <NavLink to="/notices" className={linkClass}>
+                Public Notices
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact"  className={footerActive}>
+              <NavLink to="/commercial-opportunities" className={linkClass}>
+                Commercial Opportunities
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={linkClass}>
                 Contact
               </NavLink>
             </li>
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Terminals */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Services
-          </h3>
-          <ul className="space-y-2 text-sm">
-            <li className="hover:text-white transition cursor-pointer">
-             Passenger Transportation
+          <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-white mb-4">Terminals</h3>
+          <ul className="space-y-2 text-sm text-slate-400">
+            <li>
+              <NavLink to="/terminals/holy-ghost-terminal-1" className="hover:text-white transition">
+                Holy Ghost Terminal 1 — Headquarters
+              </NavLink>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Ticketing & Booking
+            <li>
+              <NavLink to="/terminals/holy-ghost-terminal-2" className="hover:text-white transition">
+                Holy Ghost Terminal 2 — Interstate & Night Travel
+              </NavLink>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Safety & Security Monitoring
+            <li>
+              <NavLink to="/terminals/gariki" className="hover:text-white transition">
+                Gariki Bus Terminal
+              </NavLink>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Customer Support
+            <li>
+              <NavLink to="/terminals/abakpa" className="hover:text-white transition">
+                Abakpa Bus Terminal
+              </NavLink>
             </li>
           </ul>
         </div>
-
-        {/* Social Links */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Connect With Us
-          </h3>
-          <div className="flex space-x-4 text-xl">
-            <a href="#" className="hover:text-white transition">
-              <FaFacebook />
-            </a>
-            <a href="#" className="hover:text-white transition">
-              <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-white transition">
-              <FaTwitter />
-            </a>
-          </div>
-        </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm">
-          © {new Date().getFullYear()} Enugu East Zone Bus Terminal. All rights reserved.
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-6 text-center text-xs leading-5 text-slate-500">
+          © {new Date().getFullYear()} Enugu East-Zone Bus Terminals. All rights reserved.
         </div>
       </div>
     </footer>
