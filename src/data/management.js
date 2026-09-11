@@ -5,7 +5,7 @@
 import abakpaManager from "../assets/managemrnt team images/Abakpa terminal manager_Mr. Ugwuike Ifeanyi.jpg";
 import judeOkolo from "../assets/managemrnt team images/Dr. Jude Okolo_SPA to the managing Director.jpg";
 import obiageliOnyia from "../assets/managemrnt team images/Dr. Obiageli P. Onyia_Director Finance and accounts.jpg";
-import johnEgbo from "../assets/managemrnt team images/Hon. Dr. John N. Egbo_former Deputy Sheriff in the US_former commissioner of environment_transport_and_capital territory.jpg";
+import johnEgbo from "../assets/managemrnt team images/John-N-Egbo.jpg";
 import amechiNkwuo from "../assets/managemrnt team images/Mr. Amechi Nkwuo_Head of Enforcement department.jpg";
 import callistusOrji from "../assets/managemrnt team images/Mr. Callistus orji-ogbu_Terminal 1 manager.jpg";
 import chidiebereEmeh from "../assets/managemrnt team images/Mr. Chidiebere Francis Emeh_Secretary EEBT.jpg";
