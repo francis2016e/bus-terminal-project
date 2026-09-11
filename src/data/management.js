@@ -1,18 +1,18 @@
-// Management team — generated from src/assets/managemrnt team images filenames.
+// Management team — generated from src/assets/managemrnt_team_images filenames.
 // Preserve name/designation exactly as represented by filename; only underscores → spaces for display.
-// To add a member: add image to src/assets/managemrnt team images with "Name_Designation.jpg" or "Designation_Name.jpg" and add entry here with category/order.
+// To add a member: add image to src/assets/managemrnt_team_images with "Name_Designation.jpg" or "Designation_Name.jpg" and add entry here with category/order.
 
-import abakpaManager from "../assets/managemrnt team images/Abakpa terminal manager_Mr. Ugwuike Ifeanyi.jpg";
-import judeOkolo from "../assets/managemrnt team images/Dr. Jude Okolo_SPA to the managing Director.jpg";
-import obiageliOnyia from "../assets/managemrnt team images/Dr. Obiageli P. Onyia_Director Finance and accounts.jpg";
-import johnEgbo from "../assets/managemrnt team images/John-N-Egbo.jpg";
-import amechiNkwuo from "../assets/managemrnt team images/Mr. Amechi Nkwuo_Head of Enforcement department.jpg";
-import callistusOrji from "../assets/managemrnt team images/Mr. Callistus orji-ogbu_Terminal 1 manager.jpg";
-import chidiebereEmeh from "../assets/managemrnt team images/Mr. Chidiebere Francis Emeh_Secretary EEBT.jpg";
-import godfreyAkpugo from "../assets/managemrnt team images/Mr. Godfrey Somtochukwu Akpugo_Secretary EEBT.jpg";
-import ikechukwuEdeh from "../assets/managemrnt team images/Mr. Ikechukwu Edeh_HOD Environment.jpg";
-import josephOkenwa from "../assets/managemrnt team images/Mr. Joseph Nkwuo Okenwa_Manager terminal 2.jpg";
-import onyiaDaniel from "../assets/managemrnt team images/secretary enforcement team_Mr. Onyia Daniel.jpg";
+import abakpaManager from "../assets/managemrnt_team_images/Abakpa_terminal_manager_Mr_Ugwuike_Ifeanyi.jpg";
+import judeOkolo from "../assets/managemrnt_team_images/Dr_Jude_Okolo_SPA_to_the_managing_Director.jpg";
+import obiageliOnyia from "../assets/managemrnt_team_images/Dr_Obiageli_P_Onyia_Director_Finance_and_accounts.jpg";
+import johnEgbo from "../assets/managemrnt_team_images/John_N_Egbo.jpg";
+import amechiNkwuo from "../assets/managemrnt_team_images/Mr_Amechi_Nkwuo_Head_of_Enforcement_department.jpg";
+import callistusOrji from "../assets/managemrnt_team_images/Mr._Callistus_orji-ogbu_Terminal_1_manager.jpg";
+import chidiebereEmeh from "../assets/managemrnt_team_images/Mr._Chidiebere_Francis_Emeh_Secretary_EEBT.jpg";
+import godfreyAkpugo from "../assets/managemrnt_team_images/Mr._Godfrey_Somtochukwu_Akpugo_Secretary_EEBT.jpg";
+import ikechukwuEdeh from "../assets/managemrnt_team_images/Mr._Ikechukwu_Edeh_HOD_Environment.jpg";
+import josephOkenwa from "../assets/managemrnt_team_images/Mr._Joseph_Nkwuo_Okenwa_Manager_terminal_2.jpg";
+import onyiaDaniel from "../assets/managemrnt_team_images/secretary_enforcement_team_Mr._Onyia_Daniel.jpg";
 
 export const managementTeam = [
   {

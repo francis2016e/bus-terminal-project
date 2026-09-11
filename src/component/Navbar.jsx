@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import terminalLogo from "../assets/enugu bus terminal logo.png";
+import terminalLogo from "../assets/enugu_bus_terminal_logo.png";
 import stateLogo from "../assets/enugustategovernmentlogo.png";
 
 const Navbar = () => {

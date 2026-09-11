@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import stakeholdersImg from "../assets/Gariki terminal.jpg";
+import stakeholdersImg from "../assets/Gariki_terminal.jpg";
 
 const stakeholders = [
   {

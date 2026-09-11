@@ -3,9 +3,9 @@
 // Images are authentic terminal photographs already in the project; easy to replace by updating imports.
 
 import holyGhost1 from "../assets/terminal1img.jpg";
-import holyGhost2 from "../assets/HolyGhost Terminal 2.jpg";
-import garikiImg from "../assets/Gariki terminal.jpg";
-import abakpaImg from "../assets/Abakpa terminal.jpg";
+import holyGhost2 from "../assets/HolyGhost_Terminal_2.jpg";
+import garikiImg from "../assets/Gariki_terminal.jpg";
+import abakpaImg from "../assets/Abakpa_terminal.jpg";
 
 export const terminals = [
   {

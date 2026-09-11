@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import commercialImg from "../assets/insidehallterminalimg.jpg";
-import employmentImg from "../assets/enugu bus terminal hall.webp";
-import businessImg from "../assets/enugu bus terminal bay.webp";
+import employmentImg from "../assets/enugu_bus_terminal_hall.webp";
+import businessImg from "../assets/enugu_bus_terminal_bay.webp";
 
 const pathways = [
   {
