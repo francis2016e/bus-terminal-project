@@ -99,8 +99,10 @@ const [form, setForm] = useState({
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-800 text-lg">Telephone</h3>
-                    <p className="text-slate-600 text-sm">To be updated</p>
-                    <p className="text-xs text-slate-500 mt-1">Official line will be published here</p>
+                    <a href="tel:08085555642" className="text-sm font-medium text-blue-600 hover:text-blue-700">
+                      08085555642
+                    </a>
+                    <p className="text-xs text-slate-500 mt-1">Available for all four terminals</p>
                   </div>
                 </div>
 
@@ -110,8 +112,10 @@ const [form, setForm] = useState({
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-800 text-lg">Email</h3>
-                    <p className="text-slate-600 text-sm">To be updated</p>
-                    <p className="text-xs text-slate-500 mt-1">Official email will be published here</p>
+                    <a href="mailto:enugueastbustterminals@gmail.com" className="text-sm font-medium text-blue-600 hover:text-blue-700 break-all">
+                      enugueastbustterminals@gmail.com
+                    </a>
+                    <p className="text-xs text-slate-500 mt-1">For all terminals</p>
                   </div>
                 </div>
 
@@ -121,8 +125,24 @@ const [form, setForm] = useState({
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-800 text-lg">Office Hours</h3>
-                    <p className="text-slate-600">To be confirmed</p>
-                    <p className="text-xs text-slate-500 mt-1">Terminal operations are coordinated throughout the day</p>
+                    <p className="text-slate-600 text-sm">Mon–Sat: 8am–5pm</p>
+                    <p className="text-slate-600 text-sm">Sun: 12pm–3pm</p>
+                    <p className="text-xs text-slate-500 mt-1">Terminal Operations: 24/7</p>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-slate-100">
+                  <h3 className="font-bold text-slate-800 text-sm uppercase tracking-[0.08em] mb-3">Connect With Us</h3>
+                  <div className="space-y-2 text-sm">
+                    <a href="https://instagram.com/enugueastbusterminals2" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition">
+                      <span className="text-pink-600">◎</span> @enugueastbusterminals2 <span className="text-xs text-slate-400">Instagram</span>
+                    </a>
+                    <a href="https://x.com/BusEnugu59470" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition">
+                      <span className="font-bold">𝕏</span> @BusEnugu59470 <span className="text-xs text-slate-400">X/Twitter</span>
+                    </a>
+                    <a href="https://wa.me/2348085555642" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-600 hover:text-green-600 transition">
+                      <span className="text-green-600">◉</span> 08085555642 <span className="text-xs text-slate-400">WhatsApp</span>
+                    </a>
                   </div>
                 </div>
 

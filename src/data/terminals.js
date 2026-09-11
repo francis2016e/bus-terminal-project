@@ -17,6 +17,8 @@ export const terminals = [
       "The headquarters of Enugu East-Zone Bus Terminals and a major centre for town-service buses, State-owned BRT operations and selected mass-transit services.",
     image: holyGhost1,
     route: "/terminals/holy-ghost-terminal-1",
+    phone: "08085555642",
+    email: "enugueastbustterminals@gmail.com",
     connectionNote: null,
   },
   {
@@ -28,6 +30,8 @@ export const terminals = [
       "Connected to Terminal 1 by a pedestrian cart-walk/bridge, Terminal 2 serves a major share of interstate mass-transit and luxury bus operations, including a significant volume of night travel.",
     image: holyGhost2,
     route: "/terminals/holy-ghost-terminal-2",
+    phone: "08085555642",
+    email: "enugueastbustterminals@gmail.com",
     connectionNote: "Connected by pedestrian cart-walk/bridge",
   },
   {
@@ -39,6 +43,8 @@ export const terminals = [
       "Located at Gariki, the terminal supports the reorganisation of transport activity around the Gariki Market area, helping to reduce congestion and improve the movement of people and goods.",
     image: garikiImg,
     route: "/terminals/gariki",
+    phone: "08085555642",
+    email: "enugueastbustterminals@gmail.com",
     connectionNote: null,
   },
   {
@@ -50,6 +56,8 @@ export const terminals = [
       "Situated in Abakpa Nike, the terminal is intended to draw transport activity away from the major road, helping create a more orderly environment and freer movement for people and goods along the axis.",
     image: abakpaImg,
     route: "/terminals/abakpa",
+    phone: "08085555642",
+    email: "enugueastbustterminals@gmail.com",
     connectionNote: null,
   },
 ];

@@ -85,14 +85,18 @@ const Contact = () => {
 
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
           <h3 className="font-semibold mb-2 flex items-center justify-center gap-2 text-slate-900"><FaPhone className="text-blue-600"/> Telephone</h3>
-          <p className="text-slate-600 text-sm">To be updated</p>
-          <p className="text-xs text-slate-500 mt-1">Official line will be published here</p>
+          <a href="tel:08085555642" className="text-sm font-medium text-blue-600 hover:text-blue-700">
+            08085555642
+          </a>
+          <p className="text-xs text-slate-500 mt-1">For all four terminals</p>
         </div>
 
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
           <h3 className="font-semibold mb-2 flex items-center justify-center gap-2 text-slate-900"><FaMailBulk className="text-slate-600"/> Email</h3>
-          <p className="text-slate-600 text-sm">To be updated</p>
-          <p className="text-xs text-slate-500 mt-1">Official email will be published here</p>
+          <a href="mailto:enugueastbustterminals@gmail.com" className="text-sm font-medium text-blue-600 hover:text-blue-700 break-all">
+            enugueastbustterminals@gmail.com
+          </a>
+          <p className="text-xs text-slate-500 mt-1">For all terminals</p>
         </div>
       </div>
 
