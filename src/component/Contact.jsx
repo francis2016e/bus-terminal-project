@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import enuguMap from "../assets/static enugu map.png";
+import enuguMap from "../assets/static_enugu_map.png";
 import { FaPhone, FaMapMarker, FaMailBulk } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 

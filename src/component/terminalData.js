@@ -1,8 +1,8 @@
-import t1shop1 from "../assets/enugu bus terminal bay.webp";
-import t1shop2 from "../assets/enugu bus terminal hall.webp";
-import t1shop3 from "../assets/Gariki terminal.jpg";
-import t1shop4 from "../assets/Abakpa terminal.jpg";
-import t1shop5 from "../assets/HolyGhost Terminal 2.jpg";
+import t1shop1 from "../assets/enugu_bus_terminal_bay.webp";
+import t1shop2 from "../assets/enugu_bus_terminal_hall.webp";
+import t1shop3 from "../assets/Gariki_terminal.jpg";
+import t1shop4 from "../assets/Abakpa_terminal.jpg";
+import t1shop5 from "../assets/HolyGhost_Terminal_2.jpg";
 
 
 
