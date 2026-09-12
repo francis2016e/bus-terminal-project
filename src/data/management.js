@@ -9,7 +9,7 @@ import johnEgbo from "../assets/managemrnt_team_images/John_N_Egbo.jpg";
 import amechiNkwuo from "../assets/managemrnt_team_images/Mr_Amechi_Nkwuo_Head_of_Enforcement_department.jpg";
 import callistusOrji from "../assets/managemrnt_team_images/Mr._Callistus_orji-ogbu_Terminal_1_manager.jpg";
 import chidiebereEmeh from "../assets/managemrnt_team_images/Mr._Chidiebere_Francis_Emeh_Secretary_EEBT.jpg";
-import godfreyAkpugo from "../assets/managemrnt_team_images/Mr._Godfrey_Somtochukwu_Akpugo_Secretary_EEBT.jpg";
+import godfreyAkpugo from "../assets/managemrnt_team_images/Mr._Godfrey_Somtochukwu_Akpugo_Secretary_EEBT.png";
 import ikechukwuEdeh from "../assets/managemrnt_team_images/Mr._Ikechukwu_Edeh_HOD_Environment.jpg";
 import josephOkenwa from "../assets/managemrnt_team_images/Mr._Joseph_Nkwuo_Okenwa_Manager_terminal_2.jpg";
 import onyiaDaniel from "../assets/managemrnt_team_images/secretary_enforcement_team_Mr._Onyia_Daniel.jpg";
@@ -18,7 +18,7 @@ export const managementTeam = [
   {
     id: "hon-john-egbo",
     name: "Hon. Dr. John N. Egbo",
-    designation: "former Deputy Sheriff in the US, former commissioner of environment, transport and capital territory",
+    designation: "Managing Director",
     rawDesignation: "former Deputy Sheriff in the US_former commissioner of environment_transport_and_capital territory",
     image: johnEgbo,
     category: "md",
@@ -27,7 +27,7 @@ export const managementTeam = [
   {
     id: "jude-okolo",
     name: "Dr. Jude Okolo",
-    designation: "SPA to the managing Director",
+    designation: "SPA to the Managing Director",
     rawDesignation: "SPA to the managing Director",
     image: judeOkolo,
     category: "spa",
@@ -36,7 +36,7 @@ export const managementTeam = [
   {
     id: "obiageli-onyia",
     name: "Dr. Obiageli P. Onyia",
-    designation: "Director Finance and accounts",
+    designation: "Director, Finance and Accounts",
     rawDesignation: "Director Finance and accounts",
     image: obiageliOnyia,
     category: "dfa",
@@ -45,7 +45,7 @@ export const managementTeam = [
   {
     id: "callistus-orji",
     name: "Mr. Callistus Orji-ogbu",
-    designation: "Holy Ghost Bus Terminal 1 manager",
+    designation: "Manager, Holy Ghost Bus Terminal 1",
     rawDesignation: "Holy Ghost Bus Terminal 1 manager",
     image: callistusOrji,
     category: "terminal-managers",
@@ -54,7 +54,7 @@ export const managementTeam = [
   {
     id: "joseph-okenwa",
     name: "Mr. Nkwuo Joseph Okenwa",
-    designation: "Manager Holy Ghost Bus Terminal 2",
+    designation: "Manager, Holy Ghost Bus Terminal 2",
     rawDesignation: "Manager Holy Ghost Bus Terminal 2",
     image: josephOkenwa,
     category: "terminal-managers",
@@ -63,7 +63,7 @@ export const managementTeam = [
   {
     id: "ugwuike-ifeanyi",
     name: "Mr. Ugwuike Ifeanyi",
-    designation: "Abakpa terminal manager",
+    designation: "Manager, Abakpa Terminal",
     rawDesignation: "Abakpa terminal manager",
     image: abakpaManager,
     category: "terminal-managers",
@@ -72,7 +72,7 @@ export const managementTeam = [
   {
     id: "chidiebere-emeh",
     name: "Mr. Chidiebere Francis Emeh",
-    designation: "Secretary EEBT",
+    designation: "Secretary, Enugu East-Zone Bus Terminals",
     rawDesignation: "Secretary EEBT",
     image: chidiebereEmeh,
     category: "eebt-secretaries",
@@ -81,7 +81,7 @@ export const managementTeam = [
   {
     id: "godfrey-akpugo",
     name: "Mr. Godfrey Somtochukwu Akpugo",
-    designation: "Secretary EEBT",
+    designation: "Secretary, Enugu East-Zone Bus Terminals",
     rawDesignation: "Secretary EEBT",
     image: godfreyAkpugo,
     category: "eebt-secretaries",
@@ -90,7 +90,7 @@ export const managementTeam = [
   {
     id: "ikechukwu-edeh",
     name: "Mr. Ikechukwu Edeh",
-    designation: "HOD Environment",
+    designation: "Head of Environment",
     rawDesignation: "HOD Environment",
     image: ikechukwuEdeh,
     category: "department-heads",
@@ -99,7 +99,7 @@ export const managementTeam = [
   {
     id: "amechi-nkwuo",
     name: "Mr. Amechi Nkwuo",
-    designation: "Head of Enforcement department",
+    designation: "Head of Enforcement",
     rawDesignation: "Head of Enforcement department",
     image: amechiNkwuo,
     category: "security-heads",
@@ -108,7 +108,7 @@ export const managementTeam = [
   {
     id: "onyia-daniel",
     name: "Mr. Onyia Daniel",
-    designation: "Secretary Enforcement Team",
+    designation: "Secretary, Enforcement Team",
     rawDesignation: "secretary enforcement team",
     image: onyiaDaniel,
     category: "department-secretaries",
